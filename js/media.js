@@ -12,17 +12,49 @@
       "Hoje é seu aniversário? Pq você ta de parabéns! 10 de média"
 */
 function calcularMedia() {
-  const nota1 = parseFloat(document.getElementById("nota1").value);
+  const note1 = parseFloat(document.getElementById("nota1").value);
   const note2 = parseFloat(document.getElementById("nota2").value);
   const note3 = parseFloat(document.getElementById("nota3").value);
   const note4 = parseFloat(document.getElementById("nota4").value);
 
-  let mensagem = "";
+  let mensagem = ""
+
   // evite mexer no código acima!
 
+  let somaNotas = (note1 + note2 + note3 + note4) /4
 
+  if (somaNotas === 0) {
 
+    mensagem = "Mermao, tu zerou boy :/"}
 
+      else if ( somaNotas != 0 && somaNotas <=3) {
+        
+        mensagem = "Ei, vá estudar visse! Tá quase!"
+      }
+
+        else if (somaNotas >= 3.1 && somaNotas <= 5.9) {
+
+          mensagem = `Tu tirasse ${somaNotas} e por pouco ficasse na recuperação boy`
+        }
+
+          else if (somaNotas >= 6 && somaNotas <=7) {
+
+            mensagem = `Tu tirasse ${somaNotas} e passasse raspando visse`
+          }
+
+            else if (somaNotas >=  7.1 || somaNotas <= 9.9) {
+
+            mensagem = `Tu tirasse ${somaNotas} e passou arrasando! Notão`
+              }
+
+            else if (somaNotas >= 10) {
+
+              mensagem =  `Tirasse ${somaNotas} e passou arrasando! Notão da mizera!`
+                }
+
+              else {
+                mensagem = "Preencha os campos"
+                    }
 
   // evite mexer na linha de código abaixo!
   document.getElementById("situacaoAluno").innerHTML = mensagem;
