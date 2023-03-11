@@ -27,6 +27,12 @@ function calcularMedia() {
 
       alert("Digite notas válidas")
       mensagem = "Esperando tu digitar uma nota de verdade viss?!"
+
+    }
+
+    else if (somaNotas > 10) {
+      alert("Alguma nota foi digitada incorretamente, po!")
+      mensagem = "As notas 1, 2, 3 e 4 só podem ser até 10"
     }
 
     else if (somaNotas === 0) {
@@ -54,13 +60,13 @@ function calcularMedia() {
             mensagem = `Tu tirasse ${somaNotas} e passou arrasando! Notão`;
               }
 
-            else if (somaNotas >= 10) {
+            else if (somaNotas === 10) {
 
               mensagem =  `Tirasse ${somaNotas} e passou arrasando! Notão da mizera!`;
-                }
+            }
 
               else {
-                  alert("preencha os campos")
+                  alert("Preencha os campos")
                 mensagem = "Preencha os campos direito mó vei";
                     }
 
