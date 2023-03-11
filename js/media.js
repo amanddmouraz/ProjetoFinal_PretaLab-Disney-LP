@@ -23,37 +23,45 @@ function calcularMedia() {
 
   let somaNotas = (note1 + note2 + note3 + note4) /4
 
-  if (somaNotas === 0) {
+    if (note1 <0 || note2 <0 || note3 <0 || note4 <0) {
 
-    mensagem = "Mermao, tu zerou boy :/"}
+      alert("Digite notas válidas")
+      mensagem = "Esperando tu digitar uma nota de verdade viss?!"
+    }
+
+    else if (somaNotas === 0) {
+
+    mensagem = "Mermao, tu zerou boy :/";
+  }
 
       else if ( somaNotas != 0 && somaNotas <=3) {
         
-        mensagem = "Ei, vá estudar visse! Tá quase!"
+        mensagem = "Ei, vá estudar visse! Tá quase!";
       }
 
         else if (somaNotas >= 3.1 && somaNotas <= 5.9) {
 
-          mensagem = `Tu tirasse ${somaNotas} e por pouco ficasse na recuperação boy`
+          mensagem = `Tu tirasse ${somaNotas} e por pouco ficasse na recuperação boy`;
         }
 
           else if (somaNotas >= 6 && somaNotas <=7) {
 
-            mensagem = `Tu tirasse ${somaNotas} e passasse raspando visse`
+            mensagem = `Tu tirasse ${somaNotas} e passasse raspando visse`;
           }
 
             else if (somaNotas >=  7.1 || somaNotas <= 9.9) {
 
-            mensagem = `Tu tirasse ${somaNotas} e passou arrasando! Notão`
+            mensagem = `Tu tirasse ${somaNotas} e passou arrasando! Notão`;
               }
 
             else if (somaNotas >= 10) {
 
-              mensagem =  `Tirasse ${somaNotas} e passou arrasando! Notão da mizera!`
+              mensagem =  `Tirasse ${somaNotas} e passou arrasando! Notão da mizera!`;
                 }
 
               else {
-                mensagem = "Preencha os campos"
+                  alert("preencha os campos")
+                mensagem = "Preencha os campos direito mó vei";
                     }
 
   // evite mexer na linha de código abaixo!
